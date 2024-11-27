@@ -1,0 +1,503 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header { 
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* App.css */
+/* App.css */
+
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fc; /* Light background */
+  margin: 0;
+  padding: 0;
+}
+
+/* Home Page Styles */
+.home {
+  text-align: center;
+  padding: 20px;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  height: 500px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+.slideshow-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Content Section */
+.content-section {
+  margin-top: 30px;
+}
+
+.content-section h1 {
+  font-size: 3rem;
+  color: #2C3E50;
+  font-weight: 700;
+}
+
+.content-section p {
+  font-size: 1.5rem;
+  color: #34495E;
+  margin-top: 10px;
+}
+
+/* Who We Are Section */
+.who-we-are {
+  margin-top: 50px;
+  background-color: #ecf0f1;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.who-we-are h2 {
+  font-size: 2.5rem;
+  color: #2C3E50;
+  font-weight: 700;
+}
+
+.who-we-are p {
+  font-size: 1.2rem;
+  color: #34495E;
+  margin-top: 20px;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+  margin-top: 30px;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.why-choose-us h2 {
+  font-size: 2.5rem;
+  color: #2C3E50;
+  font-weight: 700;
+}
+
+.why-choose-us ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #34495E;
+}
+
+.why-choose-us ul li {
+  margin: 10px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.why-choose-us ul li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #1abc9c;
+  font-size: 1.5rem;
+  top: 0;
+}
+
+/* Call to Action Section */
+
+
+/* Mobile-First Design */
+@media (max-width: 768px) {
+  .content-section h1 {
+      font-size: 2rem;
+  }
+
+  .who-we-are h2, .why-choose-us h2 {
+      font-size: 2rem;
+  }
+
+  .slideshow-container {
+      height: 300px;
+  }
+
+  .slideshow-image {
+      height: 300px;
+  }
+
+  .cta-button {
+      font-size: 1rem;
+      padding: 12px 20px;
+  }
+}
+
+
+/* Resetting margins and paddings for all elements to maintain consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+/* General Container */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fc; /* Light background color */
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+/* Fixed Navbar */
+nav {
+  background-color: #2C3E50;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #1abc9c;
+}
+
+/* Main Content Below Navbar */
+main {
+  margin-top: 80px; /* To prevent content from overlapping the fixed navbar */
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Home Section */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #34495E;
+  margin-top: 50px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* Product Catalogue Styles */
+.product-catalogue {
+  margin-top: 20px;
+  width: 100%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #ecf0f1;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s;
+}
+
+.product-item:hover {
+  background-color: #dfe6e9;
+}
+
+.product-item img {
+  max-width: 80px;
+  max-height: 80px;
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.product-item .product-info {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.product-item button {
+  background-color: #1abc9c;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.product-item button:hover {
+  background-color: #16a085;
+}
+
+/* Order Form Styles */
+form {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form input, form select, form button {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+form button {
+  background-color: #2C3E50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #34495E;
+}
+
+/* Order Tracking Styles */
+.order-tracking {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+  padding: 20px;
+  background-color:lightblue;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-tracking form {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-tracking input {
+  margin-bottom: 20px;
+}
+
+.order-tracking .order-details {
+  margin-top: 20px;
+}
+
+.order-tracking p {
+  font-size: 1.2rem;
+}
+
+/* Admin Dashboard Styles */
+.admin-dashboard {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.admin-dashboard button {
+  background-color: #2C3E50;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.admin-dashboard button:hover {
+  background-color: #34495E;
+}
+
+/* Media Queries for Mobile-First Design */
+@media (max-width: 768px) {
+  nav ul li {
+      margin: 0 10px;
+  }
+
+  nav ul li a {
+      font-size: 16px;
+  }
+
+  h1 {
+      font-size: 2rem;
+  }
+
+  .product-catalogue {
+      width: 100%;
+      padding: 15px;
+  }
+
+  .product-item {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+      margin-bottom: 20px;
+  }
+
+  .product-item img {
+      max-width: 100px;
+      max-height: 100px;
+  }
+
+  form {
+      width: 90%;
+      max-width: 500px;
+  }
+
+  .order-tracking {
+      width: 90%;
+      max-width: 500px;
+  }
+
+  .admin-dashboard {
+      width: 90%;
+      max-width: 700px;
+  }
+}
+.cta {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.cta h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.cta-button {
+  background-color: #FF6347; /* Tomato color */
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #FF4500; /* Darker Tomato */
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-logo {
+  margin-bottom: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+.footer-info p {
+  margin: 5px 0;
+}
+
+.footer-info a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-info a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive styles for mobile-first approach */
+@media (max-width: 600px) {
+  .footer-content {
+      flex-direction: column;
+      text-align: center;
+  }
+}

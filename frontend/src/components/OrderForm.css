@@ -1,0 +1,115 @@
+/* Background and Card Styling */
+.order-form-container {
+    background: url('https://res.cloudinary.com/da41qeo0g/image/upload/v1732702038/online-shopping-store-business-marketing-sale-product-order-and-delivery-of-goods-tiny-people-place-orders-on-internet-modern-flat-cartoon-style-illustration-on-white-background-vector_sjwzkg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+
+.order-form-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    animation: slideIn 0.5s ease-out;
+    max-width: 90%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+/* Form Inputs and Labels */
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+input:focus, select:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0px 0px 5px #007BFF;
+}
+
+/* Input type number - cross-browser compatibility */
+input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+    -webkit-appearance: none;   /* Safari/Chrome */
+    appearance: none;           /* Standard for modern browsers */
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;   /* Safari/Chrome */
+    margin: 0;
+}
+
+/* Button Styles */
+.place-order-btn {
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+}
+
+.place-order-btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.place-order-btn:active {
+    transform: translateY(2px);
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

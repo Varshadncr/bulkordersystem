@@ -1,0 +1,35 @@
+.gif-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px; /* Set a maximum width */
+    margin: 0 auto; /* Center the GIF horizontally */
+    display: flex;
+    justify-content: center; /* Center the GIF horizontally */
+    align-items: center; /* Center the GIF vertically */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background with transparency */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow: hidden; /* Ensure the GIF doesn't overflow its container */
+}
+
+.gif-container img {
+    width: 100%; /* Make the GIF responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 400px; /* Prevent it from growing too large */
+    border-radius: 10px; /* Match the container's rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to the GIF */
+    animation: pulse 2s infinite; /* Optional animation for a soft pulsing effect */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
