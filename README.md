@@ -1,6 +1,3 @@
-Here's a README file tailored to your project with the technologies you've used and including the GitHub link:
-
----
 
 # Bulk Vegetable/Fruit Orders Web Application
 
