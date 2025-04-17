@@ -60,14 +60,10 @@ const ProductCatalogue = () => {
                     <div className="modal">
                         <button onClick={handleCloseModal} className="close-button">X</button>
                         <h2>{selectedProduct.name}</h2>
-                        <img
-                            src={selectedProduct.image_url || 'default-image.png'}
-                            alt={selectedProduct.name}
-                            className="modal-image"
-                        />
+                    
                         <p>{selectedProduct.description}</p>
                         <p><strong>Price:</strong> ${selectedProduct.price}</p>
-                        <p><strong>Category:</strong> {selectedProduct.category}</p>
+                        <p><strong>Description:</strong> {selectedProduct.description}</p>
                         <p><strong>Stock Availability:</strong> {selectedProduct.stock}</p>
                         {/* OK button to close modal */}
                         <button onClick={handleCloseModal} className="ok-button">OK</button>

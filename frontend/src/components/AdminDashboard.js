@@ -7,14 +7,17 @@ const AdminDashboard = () => {
     const [newProduct, setNewProduct] = useState({
         name: '',
         price: '',
-        description: ''
+        description: '',
+        stock: ''
     });
 
     useEffect(() => {
+        // Fetch orders
         fetch('http://localhost:5000/api/admin/orders')
             .then(response => response.json())
             .then(data => setOrders(data));
 
+        // Fetch products
         fetch('http://localhost:5000/api/products')
             .then(response => response.json())
             .then(data => setProducts(data));
@@ -32,16 +35,17 @@ const AdminDashboard = () => {
 
     const handleAddProduct = (e) => {
         e.preventDefault();
-        const { name, price, description } = newProduct;
+        const { name, price, description, stock } = newProduct;
+
         fetch('http://localhost:5000/api/products', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name, price, description })
+            body: JSON.stringify({ name, price, description, stock })
         })
         .then(response => response.json())
         .then(data => {
             setProducts([...products, data]);
-            setNewProduct({ name: '', price: '', description: '' });
+            setNewProduct({ name: '', price: '', description: '', stock: '' });
         })
         .catch(error => console.error('Error adding product:', error));
     };
@@ -90,6 +94,15 @@ const AdminDashboard = () => {
                             required
                         />
                     </div>
+                    <div className="input-group">
+                        <label>Stock:</label>
+                        <input
+                            type="number"
+                            value={newProduct.stock}
+                            onChange={(e) => setNewProduct({ ...newProduct, stock: e.target.value })}
+                            required
+                        />
+                    </div>
                     <button type="submit" className="add-btn">Add Product</button>
                 </form>
 
@@ -98,8 +111,16 @@ const AdminDashboard = () => {
                 <ul className="product-list">
                     {products.map((product) => (
                         <li key={product.id} className="product-item">
-                            <span>{product.name} - ₹{product.price}</span>
-                            <button className="delete-btn" onClick={() => handleDeleteProduct(product.id)}>Delete</button>
+                            <span>
+                                <strong>{product.name}</strong> - ₹{product.price}
+                                <br />
+                                <em>{product.description}</em>
+                                <br />
+                                <span>Stock: {product.stock}</span>
+                            </span>
+                            <button className="delete-btn" onClick={() => handleDeleteProduct(product.id)}>
+                                Delete
+                            </button>
                         </li>
                     ))}
                 </ul>
